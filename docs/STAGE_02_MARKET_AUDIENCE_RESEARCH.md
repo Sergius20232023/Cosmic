@@ -167,3 +167,107 @@ Descriptor не является частью уникального word mark �
 
 ## 13. Текущий вывод
 Направление «Match-3 + sci-fi путешествие» является хорошей базой для первой игры, потому что core mechanic знаком игроку и снижает стоимость обучения. Но рыночное отличие должно появляться не из темы, а из системной связи пазла с путешествием. Рабочий кандидат USP: **Reactive Space Journey — Match-3, где успешные действия физически оживляют кабину, корабль и внешний космос, а каждая победа продолжает единое путешествие через 5 глав.**
+
+
+## 14. Producer Review — Iteration 2 (2026-09-23)
+
+### APPROVED — Core differentiation
+Approved product formula:
+**MATCH-3 → REACTIVE LIVING WORLD → CONTINUATION OF THE JOURNEY.**
+
+The board is part of controlling the space journey. Player actions physically change the surrounding scene. Internal working name of the system: **Reactive Space Journey**.
+
+### APPROVED — Reactive world examples
+- Rescued astronaut flies from the board to the airlock.
+- Destroyed meteorite breaks into fragments that leave the board plane.
+- Collected energy/resources can visually travel into ship systems.
+- Level completion advances the ship toward the next destination.
+- Match-5 can trigger a rare external-space event (UFO/anomaly/comet/scene event).
+- Cascades drive the approved Hyperdrive Combo presentation.
+
+### UPDATED — Setting
+The five chapters MUST NOT default to the Solar System.
+Two directions remain under research:
+A. Science-inspired route based on real exoplanet systems / habitable-zone discoveries.
+B. Original fictional systems inspired by real astrophysics, allowing stronger art direction and story freedom.
+
+Research conclusion for next decision: prefer a **science-inspired fictional route** unless producer later chooses strict real-system names. Real astronomy can inspire star type, tidal locking, ocean/ice worlds, atmospheric colors and orbital geometry, while fictional destinations avoid falsely presenting speculative planet appearance or habitability as established fact.
+
+Scientific reference pool:
+- TRAPPIST-1: seven Earth-sized rocky planets; e/f/g are in the conventional habitable zone. Useful visual ideas: ultra-cool red dwarf, compact sky, tidal-locking-inspired day/night contrasts.
+- K2-18 b: habitable-zone sub-Neptune/super-Earth-scale world with methane and CO2 detections; useful inspiration for oceanic/hydrogen-atmosphere imagery, but NOT proof of habitability or life.
+Rule: “habitable zone” must never be presented as “inhabited.”
+
+### APPROVED — Obstacle progression
+Obstacle system becomes a core progression axis. Initial families:
+- Cryo/Frozen cell: layered ice; early version 1 hit, advanced variants 2–3 layers.
+- Rock/Regolith cell: cracked rocky shell; progressively reinforced variants.
+- Scorched/Burnt cell: brittle heat-damaged layer; breakable, visually distinct from rock.
+- Meteorite/Space debris blocker: physical obstacle with staged damage.
+- Energy shield: later chapter obstacle; disabled by adjacent matches or specified energy interactions.
+- Gravity anomaly: late-game candidate that affects board rules; remains EXPERIMENT until concept/MVP stage.
+
+Design rule: obstacle difficulty grows through layers and combinations, not only by lowering available moves. Every obstacle requires a clear damage-state visual.
+
+### APPROVED — Astronaut reactive phrases
+The astronaut/pilot may produce short contextual phrases after noteworthy events. Requirements:
+- short enough not to interrupt play;
+- family-safe / 0+;
+- localized RU/EN/TR;
+- event-triggered with cooldown and anti-repetition;
+- text bubble/voice-like UI must never cover critical board cells.
+Example event categories: large combo, near-failure, rare UFO, astronaut rescue, first encounter with a new obstacle, victory.
+
+### APPROVED — Difficulty philosophy
+No artificial difficulty walls. No loss that feels predetermined by RNG. No advertising that interrupts an active cascade. No progress loss. Loss must communicate why it happened. Long celebratory animations must not become mandatory friction.
+
+Proposed cadence to test:
+- Levels 1–8: normal progression/training/application.
+- Level 9: preparation/combination challenge.
+- Level 10: Challenge Mission OR Bonus Mission.
+This cadence repeats per ten-level block but MUST NOT automatically mean a difficulty spike every tenth level. Challenge levels test mastery; Bonus levels provide relief/reward. Exact alternation will be designed in Stage 4/5 and validated by telemetry.
+
+### Lives — OPEN DESIGN
+Lives are finite, not infinite. Exact cap, regeneration timer, loss rules and rewarded recovery are NOT yet approved. Required principles:
+- enough attempts to learn without immediate session termination;
+- scarcity must not become coercive;
+- rewarded ad may provide an optional extra life/attempt where platform rules permit;
+- economy must be tuned from playtest data, not guessed as final at Stage 2.
+
+### APPROVED — RNG
+Controlled board generation, guaranteed valid moves, shuffle/recovery, automated simulation and statistical level validation are required.
+
+### APPROVED — Save architecture
+Cloud-backed progression is required for the 100-level journey. SaveService must be separated from Match-3 logic and use a Yandex adapter plus local-development fallback. Save schema is versioned.
+
+### Monetization — Stage 2 recommendation
+Rewarded-first remains the preferred model. Rewarded ads are optional and must clearly state the reward. Interstitial calls are limited to logical pauses and never interrupt active cascades/gameplay. Final frequency is deliberately not fixed before retention/playtest data.
+
+### Naming update — STARQUANTA
+Producer status: **PRELIMINARILY APPROVED, NOT FINAL.**
+Important new conflict discovered during deeper search: “StarQuanta” already appears as the name of a fictional video-game company in an LSAT question that has been republished across multiple educational sites. This is not evidence of a registered game trademark, but it means the string is not genuinely unique on the open web.
+Also “Gold Star Quanta” is an existing technical product name in liquid-scintillation materials.
+Decision: keep STARQUANTA as the current preferred working candidate, but DO NOT finalize it before trademark/store/domain/confusion checks. A long subtitle such as “Космическое путешествие” is rejected by the producer. If a descriptor is needed, research shorter alternatives later.
+
+### APPROVED — Scope exclusions
+Do not add base-building, PvP, clans, battle pass, many currencies, pets, or RPG ship progression before the core loop proves itself.
+
+## 15. Revised Stage 2 Gate
+- [x] Target audience defined.
+- [x] Direct competitors identified.
+- [x] Core market risk identified: space theme alone is not differentiation.
+- [x] USP concept approved: Reactive Space Journey.
+- [x] 5 chapters × 20 levels approved.
+- [x] Gradual difficulty philosophy approved.
+- [x] Obstacles established as progression system.
+- [x] RNG-control principles approved.
+- [x] Save architecture principles approved.
+- [x] Core churn-prevention principles approved.
+- [x] Hero direction narrowed to astronaut/pilot-explorer, still requiring final role validation.
+- [ ] Real vs fictional/science-inspired star systems — producer decision pending after research.
+- [ ] Lives economy — parameters pending playtest-oriented design.
+- [ ] STARQUANTA — final clearance/selection pending.
+- [ ] 100-level macro difficulty/content curve — not yet specified.
+- [ ] Stage 2 demand-validation metrics and thresholds — not yet finalized.
+
+Stage 2 remains **IN PROGRESS**.
