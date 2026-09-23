@@ -223,3 +223,49 @@ Vertical Slice начинается с одного полностью рабо�
 
 ### Stage Gate
 Stage 2: IN PROGRESS. Не переходить к Stage 3 без финальной проверки критериев и подтверждения продюсера.
+
+
+## 21. Stage 2 — Producer Decisions, Iteration 2 (2026-09-23)
+Source detail: `docs/STAGE_02_MARKET_AUDIENCE_RESEARCH.md`.
+
+### D-007 — APPROVED: Reactive Space Journey
+Final Stage-2 USP direction approved: **MATCH-3 → REACTIVE LIVING WORLD → CONTINUATION OF THE JOURNEY.** Match-3 actions physically affect the cockpit/ship/external-space scene.
+
+### D-008 — APPROVED: Hyperdrive Combo
+Cascades receive escalating audiovisual feedback and may culminate in a short hyperdrive-like event without harming board readability.
+
+### D-009 — APPROVED: 5 chapters × 20 levels
+Total planned campaign: 100 sequential levels. Difficulty increases gradually. Every ~10 levels a Challenge/Bonus cadence may be used, but it must not become an automatic unfair spike.
+
+### D-010 — APPROVED: obstacle progression
+Core obstacle families begin with layered frozen/cryo cells, rock/regolith cells, scorched/burnt breakable cells, meteorite/debris blockers and later energy shields. Advanced obstacles require multiple hits/layers with visually explicit damage states. Gravity anomaly remains experimental.
+
+### D-011 — APPROVED: astronaut reactive text
+The astronaut/pilot may deliver short contextual/humorous 0+ phrases triggered by gameplay events, localized RU/EN/TR, with cooldown/anti-repeat and without covering critical cells.
+
+### D-012 — APPROVED: fairness principles
+No artificial difficulty walls; no deliberately predetermined-feeling RNG losses; no ad interrupting an active cascade; no progress loss; loss reason must be understandable; celebratory animations must not become forced friction.
+
+### D-013 — APPROVED: controlled RNG
+Guarantee valid moves/recovery, controlled generation, automated simulations and statistical level validation.
+
+### D-014 — APPROVED: save architecture
+Cloud-backed campaign progress; versioned SaveService separated from Match-3 engine; Yandex adapter plus local fallback.
+
+### D-015 — APPROVED: scope exclusions
+Before core validation do not add base building, PvP, clans, battle pass, many currencies, pets or RPG ship progression.
+
+### Setting direction — OPEN
+Do not default to the Solar System. Research real exoplanet systems versus original science-inspired systems. Current technical/product recommendation: fictional destinations inspired by real astronomy, to preserve visual/story freedom while avoiding false claims about speculative habitability/appearance. Producer decision pending.
+
+### Hero — PRELIMINARILY APPROVED
+Hero is the astronaut/pilot-explorer sent to investigate potentially habitable/new worlds. Role as lightweight guide/story anchor is provisionally accepted, not final.
+
+### Lives — OPEN
+Finite lives approved in principle. Exact cap, regeneration, loss and rewarded recovery parameters remain unapproved pending design/playtesting.
+
+### Naming — PRELIMINARILY APPROVED
+`STARQUANTA` is the preferred working candidate, not final. Deeper search found prior open-web use of “StarQuanta” as a fictional video-game company in an LSAT question and “Gold Star Quanta” as a technical product phrase. This does not by itself establish a game-trademark conflict, but prevents claiming uniqueness. Long subtitle “Космическое путешествие” rejected.
+
+### Stage Gate
+Stage 2 remains IN PROGRESS. Remaining: setting decision, final naming clearance/choice, lives parameters, 100-level macro curve, demand-validation metrics/thresholds.
