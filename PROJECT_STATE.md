@@ -269,3 +269,48 @@ Finite lives approved in principle. Exact cap, regeneration, loss and rewarded r
 
 ### Stage Gate
 Stage 2 remains IN PROGRESS. Remaining: setting decision, final naming clearance/choice, lives parameters, 100-level macro curve, demand-validation metrics/thresholds.
+
+
+## 22. Stage 2 — Producer Decisions, Iteration 3 (2026-09-24)
+
+### D-016 — APPROVED: Science-Inspired Fiction
+Original fictional star systems inspired by real astrophysics. Do not use the Solar System as campaign structure and do not present speculative real exoplanet habitability/appearance as fact.
+
+### D-017 — Chapter setting direction
+- Ch1: red-dwarf frontier — approved.
+- Ch2: frozen planet + blue giant — approved direction; science-inspired, not strict astrophysical habitability claim.
+- Ch3: oceanic world — approved.
+- Ch4: binary-star system + asteroid fields — approved.
+- Ch5: exotic finale near black-hole / luminous violet-blue-green environment — concept under refinement.
+Chapter names remain OPEN.
+
+### D-018 — APPROVED: chapter-map route families
+Ch1 smoothed complex cycloid; Ch2 sinusoid; Ch3 circle involute; Ch4 Cornu/Euler spiral; Ch5 tightening spiral with final node in center. Geometry is art-direction guidance; readability/node spacing wins over mathematical purity.
+
+### D-019 — Obstacle implementation direction
+Energy Shield: Ch3, 1–2 layers, transparent/readable; possible emitter-linked variant later.
+Gravity Anomaly: Ch5; v1 is localized, telegraphed pull behavior between resolution steps. Global gravity rotation rejected for MVP.
+
+### D-020 — Hero tone
+Pilot-explorer: competent, curious, humane; seriousness + restrained dry/self-aware humor. Tonal inspiration may come from Ryland Grace / Project Hail Mary, but no copying of dialogue, likeness, backstory, costume or protected expression. Status remains PRELIMINARILY APPROVED pending original character bible.
+
+### D-021 — Lives experiment
+Finite lives. Prototype candidate: cap 5; lose one on failed level; replenish approximately 25–30 min; optional opt-in rewarded recovery; no technical-failure consumption. Exact values remain OPEN pending data.
+
+### D-022 — Monetization direction
+Rewarded-first; all rewarded ads explicitly opt-in with clear reward. Interstitial only natural pauses and never active gameplay; conservative eligibility/cooldown. Sticky banner only map/menu if premium presentation survives testing; hide on board. IAP later; no paywall-driven difficulty.
+
+### Naming update
+Rejected/low-priority after search: «Космический джем» (Space Jam conflict), «Звёздный искатель» (active STARSEEKER game use), «Космический фонтан» (established technical concept), «Космические поиски» (generic/existing phrase usage). New Russian-first candidates requiring clearance: «Космопоиск», «Звёздный импульс», «Космокаскад», «Кванты звёзд», «Звёздный манёвр». STARQUANTA remains parallel working candidate.
+
+### D-023 — Macrocurve v0.1
+100-level macrocurve drafted in `docs/STAGE_02_MARKET_AUDIENCE_RESEARCH.md`: obstacle/mechanic introductions are staged across chapters; every 10-level block follows teach/practice/combine/challenge-or-bonus; L100 is mastery/story payoff rather than a new-rule dump.
+
+### D-024 — Stage 3 validation gates proposed
+Prototype gates include tutorial/objective comprehension, Reactive Space Journey recognition, continuation/retry behavior, session-duration investigation thresholds, fairness/satisfaction survey scores, and later D1/D3/D7 cohort tracking. Exact thresholds are project hypotheses and must be calibrated from real test data.
+
+### Visual asset plan
+Stage 2/3 concept assets needed: 5 chapter maps, 5 cockpit/environment keyframes, obstacle sheet, hero expression sheet, board-effects sheet, and Level-1 full-screen mockup. Generate only after briefs/route directions are approved to avoid waste.
+
+### Stage Gate
+Stage 2 remains IN PROGRESS. Remaining: chapter names + final Ch5 art concept; naming final shortlist/clearance; approve obstacle implementations; approve macrocurve v0.1; approve Stage-3 metric gates; finalize hero originality brief; lives remain experiment by design.
