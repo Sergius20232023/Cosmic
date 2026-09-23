@@ -271,3 +271,153 @@ Do not add base-building, PvP, clans, battle pass, many currencies, pets, or RPG
 - [ ] Stage 2 demand-validation metrics and thresholds — not yet finalized.
 
 Stage 2 remains **IN PROGRESS**.
+
+
+## 16. Producer Review — Iteration 3 (2026-09-24)
+
+### APPROVED — Setting model
+Science-Inspired Fiction is approved. The campaign uses original fictional star systems informed by real astrophysical phenomena, not the Solar System and not claims that speculative real exoplanets are inhabited.
+
+### Chapter visual brief v0.2
+1. Chapter 1: approved red-dwarf frontier concept. Mood: wonder, confidence, first-contact-with-the-unknown; warm red/coral light against cool cockpit UI.
+2. Chapter 2: frozen planet under a blue giant. Mood: crystalline beauty, clarity, controlled danger rather than darkness. Scientific note: strict realism is intentionally relaxed; a blue giant is a short-lived, high-radiation star, so the chapter is science-inspired rather than a claim of likely habitability.
+3. Chapter 3: approved oceanic world. Mood: discovery, calm grandeur, electrical atmosphere, deep cyan/turquoise/violet palette.
+4. Chapter 4: binary-star system + asteroid fields. Mood: speed, navigation, unstable illumination, high-energy expedition; two moving light sources visually distinguish the chapter.
+5. Chapter 5: exotic finale near a black hole with a blue-green/violet luminous companion/accretion environment. Recommended concept: “The Last Signal” — a safe fictional observation region around an exotic compact-object system, with gravitational lensing, warped starfield and a mysterious signal. Mood: awe, mystery, culmination, not horror.
+
+Chapter names remain OPEN and must be co-selected with producer.
+
+### APPROVED — Chapter map geometry
+- Chapter 1: complex cycloid-like route with softened/smoothed turns.
+- Chapter 2: sinusoidal route.
+- Chapter 3: involute-of-a-circle route.
+- Chapter 4: Cornu/Euler spiral route.
+- Chapter 5: tightening spiral with the finale at the center.
+Implementation note: these are visual path families, not strict mathematical plots; level-node spacing and tap readability override mathematical purity.
+
+### Obstacle design — proposed implementation
+**Energy Shield**
+- Introduced Chapter 3.
+- A translucent shield covers a cell/target but does not hide readability.
+- Shield I: remove with one adjacent match or direct special hit.
+- Shield II: two charge layers; first hit visibly destabilizes it.
+- Later linked-shield variant: a small group shares an emitter; destroy/disable emitter to drop linked shields. Linked variant remains Stage-4/5 content candidate.
+- Shield never changes tile color or makes legal-move recognition ambiguous.
+
+**Gravity Anomaly**
+- Introduced only in Chapter 5 after all core board rules are learned.
+- Recommended v1: localized gravity well, not global direction reversal.
+- It occupies a marked cell/zone and, after resolution, pulls a nearby movable tile one cell toward its center when this can be done without violating resolution-state safety.
+- It is telegraphed before movement and never acts during player input.
+- Special hits can destabilize/remove it depending on level objective.
+- Full-board gravity rotation is rejected for MVP because it changes the mental model too sharply and increases implementation/test complexity.
+
+### Hero — PRELIMINARILY APPROVED tone
+The pilot-explorer should be competent, scientifically curious, humane, serious when stakes require it, and use dry/self-aware humor as tension relief. Inspiration is the tonal balance of Ryland Grace in Project Hail Mary; do not copy dialogue, likeness, backstory, costume or protected character-specific expression.
+Hero phrases: serious + ironic + humorous, with cooldown, anti-repeat, localization and no board obstruction.
+
+### Lives research — evidence and provisional design
+Public sources rarely publish a reliable universal statistic for “attempts before frustration” specifically for Match-3; do not invent one. Useful observed anchors:
+- Royal Match currently uses a 5-life cap and replenishes one life every 30 minutes.
+- Broad 2025 mobile benchmarks from GameAnalytics show median sessions around 3.1–3.5 minutes, top-quartile around 5.2 minutes, with high performers longer; this is cross-game, not Match-3-specific.
+Therefore the project should treat lives as an experiment, not copy a competitor blindly.
+
+Provisional test configuration for prototype/closed test:
+- cap: 5 lives;
+- lose 1 only on failed level, not on quit before first move / technical failure;
+- regeneration: 1 per 25–30 minutes (A/B candidate, not final);
+- never consume a life on victory;
+- optional rewarded recovery, clearly opt-in;
+- first-session protection: early tutorial levels should be tuned so life depletion is unlikely.
+Decision remains OPEN until Stage 3/14 data.
+
+### Monetization — loyalty/revenue balance
+Recommended launch philosophy:
+1. Rewarded-first, opt-in.
+2. Best placements: after loss for extra moves (limited), pre-level optional booster, post-win reward multiplier/bonus, optional life recovery.
+3. Do NOT chain an interstitial immediately after rewarded.
+4. Interstitial calls only at natural transitions and never active gameplay; use a conservative cooldown/eligibility layer even though Yandex controls actual serving frequency.
+5. Sticky banner only on map/menu if visual tests show it does not damage premium presentation; hide during the board.
+6. IAP later: small starter pack, currency/boosters, and optionally ad-removal for eligible non-rewarded formats; no pay-to-win wall.
+7. Revenue optimization is subordinate to retention: track rewarded opt-in, ad-related exits, level-start continuation and D1/D7 before increasing ad pressure.
+
+### Naming research — Russian-first round
+Producer ideas reviewed:
+- «Космический джем» — reject: strongly conflicts with the established Russian title of Space Jam and an existing Space Jam game/IP.
+- «Звёздный искатель» — reject as primary brand: STARSEEKER / «Звёздный искатель» is already in active game use in the Astroneer ecosystem.
+- «Космический фонтан» — not preferred: already an established technical concept for a space-launch megastructure; semantically weak for Match-3 journey.
+- «Космические поиски» — understandable but generic; existing event/title usage appears in search and it undersells the reactive journey.
+
+New Russian-first naming candidates for the next clearance round:
+- «Космопоиск»
+- «Звёздный импульс»
+- «Космокаскад»
+- «Кванты звёзд»
+- «Звёздный манёвр»
+These are candidates only, NOT cleared or final. STARQUANTA remains a parallel working candidate until final naming decision.
+
+### Macrocurve 1–100 v0.1
+Design principle per 10-level block: teach → practice → combine → challenge/relief. Challenge/Bonus cadence alternates to avoid predictable punishment.
+
+| Levels | Chapter / focus | New or emphasized mechanics | Gate |
+|---|---|---|---|
+| 1–10 | Ch1 Red Frontier | basic swap/match, goals, moves; Cryo I at 4; simple collect/rescue at 6; rocket special at 7; cascades/Hyperdrive feedback | L10 Challenge: rescue + Cryo I |
+| 11–20 | Ch1 | Cryo II; meteor/debris I; black-hole Match-5; T/L supernova; first mixed goals | L20 Chapter Finale: multi-goal, Rare Space Event |
+| 21–30 | Ch2 Frozen World | Cryo III; Rock I; restricted-space layouts; stronger rescue | L30 Bonus: high-cascade crystal storm |
+| 31–40 | Ch2 | Rock II/III; Scorched I introduced as thermal damage contrast; two-obstacle combinations | L40 Challenge: layered ice + rock |
+| 41–50 | Ch3 Ocean World | Energy Shield I; energy-delivery objective; moving visual energy to ship | L50 Bonus: shield-chain spectacle, generous cascades |
+| 51–60 | Ch3 | Energy Shield II; emitter/linked-shield prototype if readable; Scorched II; three-goal levels begin sparingly | L60 Challenge: shield + energy routing |
+| 61–70 | Ch4 Binary/Asteroids | Meteor II/III; denser shaped boards; alternating environmental visual events (no rule ambiguity) | L70 Bonus: asteroid shower spectacle |
+| 71–80 | Ch4 | reinforced debris; mixed layered obstacles; special-combo mastery; fewer tutorials | L80 Chapter Finale Challenge: mastery of Ch1–4 systems |
+| 81–90 | Ch5 Last Signal | Gravity Anomaly I localized; anomaly objectives; advanced Rare Space Events | L90 Bonus: controlled anomaly cascade / high spectacle |
+| 91–100 | Ch5 | Gravity Anomaly II + selected prior obstacles; mastery rather than new-rule overload | L100 Finale: multi-phase-feeling board, story payoff, center of spiral |
+
+Balancing guardrails:
+- Never introduce more than one cognitively major mechanic in the same level.
+- First encounter is intentionally easy and demonstrates cause/effect.
+- Advanced layer appears only after several exposures.
+- Challenge level tests learned skills; it is not an arbitrary move reduction.
+- Bonus level must be genuinely generous and visually rewarding.
+- Level 100 combines mastered systems but should not introduce an entirely new core rule.
+
+### Stage 3 validation metrics — proposed measurable gates
+Because benchmarks differ by platform/source, these are INTERNAL prototype gates, not claimed industry laws.
+
+Qualitative usability gates:
+- ≥90% testers can make a valid first move without explanation after tutorial cue.
+- ≥80% can correctly explain the current level objective after the first 3 tutorial levels.
+- ≥80% correctly understand what damaged at least the first three obstacle families.
+- ≥70% spontaneously notice at least one Reactive Space Journey reaction.
+- ≥60% can describe the game afterward using both a Match-3 concept and a journey/world-reaction concept.
+
+Behavioral prototype gates:
+- Tutorial completion ≥85%.
+- Level-1 completion ≥80% among users who start it.
+- First-session reach Level 3 ≥65%.
+- First-session reach Level 5 ≥45%.
+- Median first-session active play target ≥8 minutes for recruited prototype testers; investigate if <5 min.
+- “Play another level” continuation after first win ≥70%.
+- Immediate retry after a fair loss ≥55%.
+- Quit-after-loss rate should not materially spike on Challenge levels relative to surrounding levels; investigate >10 percentage-point spike.
+- No single early level target median attempts >2.5 before Level 10; no early level should create a long-tail of repeated failures without an identified reason.
+
+Experience survey gates (5-point scale):
+- “Moves feel satisfying” mean ≥4.0.
+- “I understand why I won/lost” ≥4.0.
+- “The space world feels alive” ≥4.0.
+- “I want to see the next destination” ≥4.0.
+- “Ads/reward offers feel optional” ≥4.0 once monetization is tested.
+
+Retention after public/closed test (not Stage-3 prototype-only):
+Track D1, D3, D7 by source/device; do not declare universal pass/fail from a generic mobile benchmark. Establish project baseline first, then compare cohorts and iterations.
+
+### Required visual assets — planning list
+Do NOT generate final production art before chapter briefs are approved. For Stage 2/3 concept validation, generate:
+1. Five chapter-map concept images (one per chapter), both landscape master composition and later responsive portrait adaptation.
+2. Five cockpit/window environment keyframes (one per chapter).
+3. One obstacle sheet: Cryo I–III, Rock I–III, Scorched I–II, Meteor I–III, Shield I–II, Gravity Anomaly.
+4. One hero character sheet: neutral, focused, amused/ironic, surprised, victory reaction.
+5. One board-effects sheet: Hyperdrive combo stages, Match-5 Rare Event, rescue-to-airlock, meteor break, energy-to-engine.
+6. One Level-1 full-screen vertical-slice mockup after these visual rules are approved.
+
+Prompt briefs are maintained below for image generation when producer requests generation.
